@@ -3,6 +3,7 @@ import { Cliente } from './cliente'
 import {ClienteService} from './cliente.service'
 import {Router, ActivatedRoute} from '@angular/router'
 import Swal from 'sweetalert2'
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-form',
@@ -37,7 +38,8 @@ export class FormComponent implements OnInit {
       //this.router.navigate([''])
       Swal.fire('Nuevo Cliente',`El cliente ${cliente.nombre}: ha sido creado con éxito!.`,'success')
       this.cliente= new Cliente();
-      window.location.href="http://ec2-3-85-9-193.compute-1.amazonaws.com/";},
+      window.location.href=environment.redirectSite;
+    },
     err => {
       this.errores =  err.error.errors as string[];
       console.error('Codigo del error desde el backend: ' + err.status);
