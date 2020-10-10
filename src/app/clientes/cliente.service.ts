@@ -12,8 +12,8 @@ import {Router} from '@angular/router';
 
 export class ClienteService {
 
-  //private urlEndPoint:string = 'https://digi-apps-shool.herokuapp.com/api/clientes'
-  private urlEndPoint:string = 'http://localhost:8080/api/clientes'
+  private urlEndPoint:string = 'https://digi-apps-shool.herokuapp.com/api/clientes'
+  //private urlEndPoint:string = 'http://localhost:8080/api/clientes'
   private httpHeaders = new HttpHeaders({'Content-type':'application/json'})
   constructor(private http: HttpClient, private router: Router) { }
 
