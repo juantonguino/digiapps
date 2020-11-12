@@ -1,0 +1,33 @@
+<div class="row">
+    <h2>Iniciar sesion</h2>
+</div>
+<div class="row justify-content-center mt-5">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" [(ngModel)]="userEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" [(ngModel)]="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="row">
+                <div class="col col-md-6">
+                    <button class="btn btn-primary" (click)="loginEmailPassword()">Iniciar</button>
+                </div>
+                <div class="col col-md-6">
+                    <button routerLink='/register' class="btn btn-secondary">Registrar</button>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col col-md-12 mt-5">
+                    <button type="button" class="btn btn-danger" (click)="authService.googleSignin()">
+                        <img src="assets/google-brands.svg" width="20" height="20" alt=""> Log in with Google
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
