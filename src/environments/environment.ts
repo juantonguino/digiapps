@@ -4,7 +4,14 @@
 
 export const environment = {
   production: false,
-
+  firebaseConfig:{
+    apiKey: "AIzaSyBVX9_I8iCiez8AH_bfuw5t6rHezIzogkQ",
+    authDomain: "digiapps-51eb8.firebaseapp.com",
+    databaseURL: "https://digiapps-51eb8.firebaseio.com",
+    projectId: "digiapps-51eb8",
+    storageBucket: "digiapps-51eb8.appspot.com",
+    messagingSenderId: "sender-id",
+  },
   redirectSite: "www.google.com"
 };
 
