@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebaseConfig:{
-    apiKey: "AIzaSyBVX9_I8iCiez8AH_bfuw5t6rHezIzogkQ",
-    authDomain: "digiapps-51eb8.firebaseapp.com",
-    databaseURL: "https://digiapps-51eb8.firebaseio.com",
-    projectId: "digiapps-51eb8",
-    storageBucket: "digiapps-51eb8.appspot.com",
+    apiKey: "AIzaSyBHTJavHAUCVBitznzQ5wwk8wtpCsOFG4U",
+    authDomain: "digiapps-dd63b.firebaseapp.com",
+    databaseURL: "https://digiapps-dd63b.firebaseio.com",
+    projectId: "digiapps-dd63b",
+    storageBucket: "digiapps-dd63b.appspot.com",
     messagingSenderId: "sender-id",
   },
   redirectSite: "http://ec2-3-85-9-193.compute-1.amazonaws.com/gracias-por-registrarte/",
