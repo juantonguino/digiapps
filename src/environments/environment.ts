@@ -12,7 +12,8 @@ export const environment = {
     storageBucket: "digiapps-51eb8.appspot.com",
     messagingSenderId: "sender-id",
   },
-  redirectSite: "www.google.com"
+  redirectSite: "www.google.com",
+  redirectSiteLogin:"http://ec2-54-81-245-250.compute-1.amazonaws.com/escuela/"
 };
 
 /*

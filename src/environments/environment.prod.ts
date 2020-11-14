@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: "digiapps-51eb8.appspot.com",
     messagingSenderId: "sender-id",
   },
-  redirectSite: "http://ec2-3-85-9-193.compute-1.amazonaws.com/gracias-por-registrarte/"
+  redirectSite: "http://ec2-3-85-9-193.compute-1.amazonaws.com/gracias-por-registrarte/",
+  redirectSiteLogin:"http://ec2-54-81-245-250.compute-1.amazonaws.com/escuela/"
 };

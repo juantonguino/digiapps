@@ -6,6 +6,8 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { switchMap } from 'rxjs/operators';
+import Swal from 'sweetalert2';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -32,11 +34,23 @@ export class AuthService {
       )
     }
 
-    async googleSignin() {
+    googleSignin() {
       let provider = new auth.GoogleAuthProvider();
-      let credential = await this.afAuth.signInWithPopup(provider);
-      console.log(credential)
-      return this.updateUserData(credential.user);
+      //let credential = await this.afAuth.signInWithPopup(provider);
+      //console.log(credential)
+      //return this.updateUserData(credential.user);
+      this.afAuth.signInWithPopup(provider)
+        .then(data=>{
+          this.updateUserData(data.user);
+          window.location.href=environment.redirectSiteLogin;
+        }).catch(err=>{
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: `<a href>${err.message}</a>`
+            })
+        })
     }
 
     async emailRegister(email: string, password:string){
@@ -48,10 +62,15 @@ export class AuthService {
     emailPasswordSingin(email: string, password:string){
       this.afAuth.signInWithEmailAndPassword(email,password)
         .then(data=>{
-          console.log(data);
           this.updateUserData(data.user);
+          window.location.href=environment.redirectSiteLogin;
         }).catch(err=>{
-          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: `<a href>${err.message}</a>`
+            })
         })
     }
 
